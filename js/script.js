@@ -2,28 +2,33 @@ var movies = [
   {
   	id: 1,
     title: 'Harry Potter',
-    desc: 'film o czarodzieju'
+    desc: 'film o czarodzieju',
+    src: 'harry.jpg'
   },
   {
   	id: 2,
     title: 'Król Lew',
-    desc: 'Film o królu sawanny'
+    desc: 'Film o królu sawanny',
+    src: 'KrolLew.jpg'
   },
   {
-	id: 3,
-	title: 'Shreck',
-	desc: 'Film o zielonym ogrze'
+  	id: 3,
+  	title: 'Shreck',
+  	desc: 'Film o zielonym ogrze',
+    src: 'Shreck.jpg'
   },
   {
   	id: 4,
   	title: 'Madagaskar',
-  	desc: 'Film o zwierzętach w zoo'
+  	desc: 'Film o zwierzętach w zoo',
+    src: 'Madagaskar.jpg'
   }
 ];
 var moviesElements = movies.map(function(movie) {
   return React.createElement('li', {key: movie.id},
-      React.createElement('h2', {}, movie.title),
-      React.createElement('p', {}, movie.desc)
+         React.createElement('h2', {}, movie.title),
+         React.createElement('p', {}, movie.desc),
+         React.createElement('img', {key: movie.src}  )
     );
 });
 var element =
